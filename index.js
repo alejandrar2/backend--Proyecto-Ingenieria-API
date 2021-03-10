@@ -10,7 +10,7 @@ app.use(express.static('public'));
 require('./database/asociations');
 
 // Rutas
-app.use('/app', require('./routes/app'));
+app.use('/producto', require('./routes/app'));
 
 app.listen(3000, () => {
 
