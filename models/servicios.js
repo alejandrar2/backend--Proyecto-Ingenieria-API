@@ -2,22 +2,20 @@ var { Model, DataTypes } = require('sequelize');
 var sequelize = require('../database/conexion');
 
 
-class Producto extends Model { }
+class Servicio extends Model { }
 
-Producto.init({
+Servicio.init({
     nombre: DataTypes.STRING,
-    precio: DataTypes.DOUBLE,
-    moneda: DataTypes.DOUBLE,
-    imagen: DataTypes.STRING,
     descripcion: DataTypes.STRING,
-    estado: DataTypes.STRING
+    fecha_incial: DataTypes.DATE,
+    fecha_final: DataTypes.DATE
 },
     {
         sequelize,
-        modelName: 'producto',
+        modelName: 'servicio',
         timestamps: false
     }
 );
 
 
-module.exports = Producto;
+module.exports = Servicio;

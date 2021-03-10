@@ -2,20 +2,18 @@ var { Model, DataTypes } = require('sequelize');
 var sequelize = require('../database/conexion');
 
 
-class User extends Model { }
+class Publicacion extends Model { }
 
-User.init({
+Publicacion.init({
     nombre: DataTypes.STRING,
-    apellido: DataTypes.STRING,
-    comentario: DataTypes.STRING,
-    calificacion: DataTypes.STRING
+    descripcion: DataTypes.STRING
 },
     {
         sequelize,
-        modelName: 'user',
+        modelName: 'publicacion',
         timestamps: false
     }
 );
 
 
-module.exports = User;
+module.exports = Publicacion;
