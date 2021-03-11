@@ -10,11 +10,13 @@ app.use(express.static('public'));
 require('./database/asociations');
 
 // Rutas
-app.use('/producto', require('./routes/app'));
+app.use('/user', require('./routes/user'));
+
+
 
 app.listen(3000, () => {
 
-    sequelize.sync().then(con => console.log('Conectado'));
+    sequelize.sync( ).then(con => console.log('Conectado'));
 
     console.log(`Server on port http://localhost:3000`)
 });

@@ -5,10 +5,9 @@ var sequelize = require('../database/conexion');
 class User extends Model { }
 
 User.init({
-    nombre: DataTypes.STRING,
-    apellido: DataTypes.STRING,
-    comentario: DataTypes.STRING,
-    calificacion: DataTypes.STRING
+    
+    contraseña: DataTypes.STRING,
+    correo: DataTypes.STRING
 },
     {
         sequelize,
