@@ -6,8 +6,9 @@ class User extends Model { }
 
 User.init({
     
-    contraseña: DataTypes.STRING,
-    correo: DataTypes.STRING
+    
+    correo: DataTypes.STRING,
+    contraseña: DataTypes.STRING
 },
     {
         sequelize,

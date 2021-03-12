@@ -5,6 +5,7 @@ var sequelize = require('../database/conexion');
 class Departamento extends Model { }
 
 Departamento.init({
+    
     nombre: DataTypes.STRING,
     pais:DataTypes.STRING
     

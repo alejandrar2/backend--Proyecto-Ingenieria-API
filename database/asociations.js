@@ -7,6 +7,10 @@ const Departamento = require('../models/departamento');
 const Municipio = require('../models/municipio');
 const Persona = require('../models/persona');
 const Servicio = require('../models/servicio');
+const Publicion = require('../models/publicacion');
+const Publicacion = require('../models/publicacion');
+const { belongsTo } = require('../models/user');
+
 
 
 //RELACION PRODUCTO - USUARIO ( Un usuario tiene muchos productos)
@@ -18,4 +22,48 @@ Producto.belongsTo(Categoria);
 
 Categoria.hasMany(Producto);
 
-//RELACION 
+//RELACION PERSONA A USER
+
+Persona.hasOne(User);
+
+User.hasOne(Persona);
+
+//RELACION PERSONA A ADMINISTRADOR
+
+Persona.hasOne(Administrador);
+
+Administrador.hasOne(Persona);
+
+//RELACION USUARIO A DENUNCIA
+
+User.hasMany(Denuncia);
+
+Denuncia.belongsTo(User);
+
+//RELACION USUARIO A PUBLICACION
+
+User.hasMany(Publicacion);
+
+Publicacion.belongsTo(User);
+
+//RELACION ADMINISTRADOR
+
+Administrador.hasMany(Servicio);
+
+Servicio.belongsTo(Administrador);
+
+//PRODUCTO A DEPARTAMENTO
+
+Producto.hasMany(Departamento);
+
+Departamento.belongsTo(Producto);
+
+// DEPARTAMENTO A MUNICIPIO 
+
+Departamento.hasMany(Municipio);
+
+Municipio.belongsTo(Departamento);
+
+
+
+

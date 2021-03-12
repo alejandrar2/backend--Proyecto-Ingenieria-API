@@ -5,8 +5,8 @@ var sequelize = require('../database/conexion');
 class Administrador extends Model { }
 
 Administrador.init({
-    nombre: DataTypes.STRING,
-    apellido: DataTypes.STRING
+    correo: DataTypes.STRING,
+    contrasenia: DataTypes.STRING
     
 },
     {

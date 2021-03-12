@@ -5,7 +5,7 @@ var sequelize = require('../database/conexion');
 class Denuncia extends Model { }
 
 Denuncia.init({
-    Queja: DataTypes.STRING,
+    
     Contenido: DataTypes.STRING
 },
     {
