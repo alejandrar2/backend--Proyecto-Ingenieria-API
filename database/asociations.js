@@ -7,9 +7,8 @@ const Departamento = require('../models/departamento');
 const Municipio = require('../models/municipio');
 const Persona = require('../models/persona');
 const Servicio = require('../models/servicio');
-const Publicion = require('../models/publicacion');
 const Publicacion = require('../models/publicacion');
-const { belongsTo } = require('../models/user');
+
 
 
 
@@ -26,20 +25,15 @@ Categoria.hasMany(Producto);
 
 Persona.hasOne(User);
 
-User.hasOne(Persona);
-
 //RELACION PERSONA A ADMINISTRADOR
 
 Persona.hasOne(Administrador);
-
-Administrador.hasOne(Persona);
 
 //RELACION USUARIO A DENUNCIA
 
 User.hasMany(Denuncia);
 
 Denuncia.belongsTo(User);
-
 //RELACION USUARIO A PUBLICACION
 
 User.hasMany(Publicacion);
@@ -63,7 +57,6 @@ Departamento.belongsTo(Producto);
 Departamento.hasMany(Municipio);
 
 Municipio.belongsTo(Departamento);
-
 
 
 

@@ -8,7 +8,7 @@ User.init({
     
     
     correo: DataTypes.STRING,
-    contraseña: DataTypes.STRING
+    contrasenia: DataTypes.STRING
 },
     {
         sequelize,

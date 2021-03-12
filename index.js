@@ -16,7 +16,7 @@ app.use('/user', require('./routes/user'));
 
 app.listen(3000, () => {
 
-    sequelize.sync( ).then(con => console.log('Conectado'));
+    sequelize.sync(force =true).then(con => console.log('Conectado'));
 
     console.log(`Server on port http://localhost:3000`)
 });
